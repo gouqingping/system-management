@@ -1,0 +1,59 @@
+$defWidth:5px;
+$flex:flex;
+$f_wrap:wrap;
+$justify:flex-start;
+$SafariFlex:-webkit-flex;
+$defColor:#4fc5fc;
+$auxOrange:#fbb03b;
+$auxRed:#fb5b3b;
+
+.flex {
+    justify-content: $justify;
+    display: $flex;
+    display: $SafariFlex;
+}
+.userselect{
+     -webkit-user-select:none;
+     -moz-user-select:none;
+     -ms-user-select:none;
+     user-select:none;
+}
+.calendar {
+    flex-wrap: $f_wrap;
+    width:$defWidth*55;
+    height:$defWidth*60;
+    @extend .userselect;
+    .tody {
+        color:white !important;
+        border-color:$auxOrange !important;
+        cursor: pointer;
+        background:$auxOrange !important;
+        border-radius: 4px;
+    }
+    .active {
+        color:white !important;
+        border-color:$defColor !important;
+        cursor: pointer;
+        background:$defColor !important;
+        border-radius: 4px;
+    }
+    .clist {
+        @extend .ctitle;
+        div:hover {
+            @extend .active;
+        }
+    }
+    .ctitle {
+        width:100%;
+        @extend .flex;
+        flex-wrap: $f_wrap;
+        div {
+            width:(($defWidth*55)/7)-4;
+            height:(($defWidth*55)/7)-4;
+            line-height:(($defWidth*55)/7)-4;
+            text-align:center;
+            border:1px solid;
+            border-color:transparent;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.flex, .calendar .ctitle, .calendar .clist {
+  justify-content: flex-start;
+  display: flex;
+  display: -webkit-flex; }
+
+.userselect, .calendar {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.calendar {
+  flex-wrap: wrap;
+  width: 275px;
+  height: 300px; }
+  .calendar .tody {
+    color: white !important;
+    border-color: #fbb03b !important;
+    cursor: pointer;
+    background: #fbb03b !important;
+    border-radius: 4px; }
+  .calendar .active, .calendar .clist div:hover {
+    color: white !important;
+    border-color: #4fc5fc !important;
+    cursor: pointer;
+    background: #4fc5fc !important;
+    border-radius: 4px; }
+  .calendar .ctitle, .calendar .clist {
+    width: 100%;
+    flex-wrap: wrap; }
+    .calendar .ctitle div, .calendar .clist div {
+      width: 35.28571px;
+      height: 35.28571px;
+      line-height: 35.28571px;
+      text-align: center;
+      border: 1px solid;
+      border-color: transparent; }
+
+/*# sourceMappingURL=set.data.css.map */

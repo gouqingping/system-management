@@ -1,0 +1,96 @@
+/** @type {default width} [description] */
+$defWidth:5px;
+$fonts:"SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+/** @type {font Size} [description] */
+$minSize:12px;
+$mSize:14px;
+$defSize:16px;
+$proSize:18px;
+$comSize:20px;
+$maxSize:30px;
+$bigSize:36px;
+
+/** @type {color} [description] */
+$defColor:#4fc5fc;
+$auxOrange:#fbb03b;
+$auxRed:#fb5b3b;
+
+$fontDefColor:#333;
+$fontAuxColor:#666;
+$fontDrkColor:#999;
+
+$drkColor:#b2b2b2;
+$bgColor:#f0f0f0;
+$proColor:#fbfbfb;
+$white:white;
+$boderColor:#dcdcdc;
+
+$boxShow: 0 0 $defWidth 0 rgba(0,0,0,.25);
+
+/** @type {padding} [description] */
+$defPadding:$defWidth*3;
+$lefRagPad:$defWidth*0 $defWidth*3;
+$boTopPad:$defWidth*3 $defWidth*0;
+
+
+/** @type {margin} [description] */
+$defMargin:$defPadding;
+$lefRagMrg:$defWidth*0 $defWidth*3;
+$boTopMrg:$defWidth*3 $defWidth*0;
+
+/** [columnwidth description] */
+$doColu:$defWidth*36;
+@function getColu($def) {
+	$w:$def + ($defPadding*2);
+    @return $w - ($defPadding*2);
+}
+
+@mixin comptrans($attr,$t) {
+	transition:$attr $t;
+	-moz-transition:$attr $t;
+	-webkit-transition:$attr $t;
+	-o-transition:$attr $t;
+}
+
+@mixin linkcolors($normal, $hover, $visited) {
+	color: $normal;
+	text-decoration:none;
+	&:hover { 
+		color: $hover;
+		text-decoration:none; 
+	}
+	&:visited { 
+		color: $visited;
+		text-decoration:none; 
+	}
+}
+
+@mixin a {
+  @include linkcolors($fontDefColor, $defColor, $fontAuxColor);
+}
+
+$border: 1px solid $boderColor;
+$colourborder: 1px solid $defColor;
+$auxRedborder: 1px solid $auxRed;
+$auxOrangeborder: 1px solid $auxOrange;
+/**default flex**/
+$defaultW:100%;
+$color:#0099ff;
+$flex:flex;
+$SafariFlex:-webkit-flex;  /* compatible Safar */
+$f_wrap:wrap;              /* nowrap | wrap | wrap-reverse(The first line is below) */
+$justify:flex-start;       /* flex-start | flex-end | center | space-between(Align at both ends) | space-around(The interval on each side of each item is equal) */
+$align:stretch;            /* flex-start | flex-end | center | baseline | stretch(default) */
+$align_self: auto;         /* auto | flex-start | flex-end | center | baseline | stretch */
+$order: 1;                 /* default 0 */
+$f_grow: 1;                /* default 0 */
+$f_shrink: 0;              /* default 1 */
+$f_basis: 1px;             /* default auto */
+$f_dction: row;            /*
+                                Horizontal direction
+                                    row (default)  - starting point at the left end
+                                    row-reverse    - starting point at the right end
+                                Vertical direction
+                                    column         - starting point at the top end
+                                    column-reverse - starting point at the bottom end
+                            */

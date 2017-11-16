@@ -1,0 +1,128 @@
+/** @type {default width} [description] */
+/** @type {font Size} [description] */
+/** @type {color} [description] */
+/** @type {padding} [description] */
+/** @type {margin} [description] */
+/** [columnwidth description] */
+/**default flex**/
+/* compatible Safar */
+/* nowrap | wrap | wrap-reverse(The first line is below) */
+/* flex-start | flex-end | center | space-between(Align at both ends) | space-around(The interval on each side of each item is equal) */
+/* flex-start | flex-end | center | baseline | stretch(default) */
+/* auto | flex-start | flex-end | center | baseline | stretch */
+/* default 0 */
+/* default 0 */
+/* default 1 */
+/* default auto */
+/*
+     Horizontal direction
+         row (default)  - starting point at the left end
+         row-reverse    - starting point at the right end
+     Vertical direction
+         column         - starting point at the top end
+         column-reverse - starting point at the bottom end
+ */
+/** defl */
+.overfl {
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.flex {
+  justify-content: flex-start;
+  display: flex;
+  display: -webkit-flex; }
+
+.inline {
+  display: inline-block;
+  display: inline; }
+
+.nowrap, .title {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.vertical {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden; }
+
+.cursor {
+  cursor: pointer; }
+
+.userselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/** color */
+.colour {
+  color: #4fc5fc; }
+
+.colourBg {
+  background: #4fc5fc; }
+
+.red {
+  color: #fb5b3b; }
+
+.redBg {
+  background: #fb5b3b; }
+
+.orange {
+  color: #fbb03b; }
+
+.orangeBg {
+  background: #fbb03b; }
+
+/** but */
+.defColorBut {
+  border: 1px solid #4fc5fc;
+  color: #4fc5fc; }
+
+.misColorBut {
+  border: 1px solid #fb5b3b;
+  color: #fb5b3b; }
+
+img {
+  border: none; }
+
+/*****      index style        ****/
+* {
+  behavior: url(../css/PIE.htc); }
+
+body {
+  height: 100%;
+  margin-top: -60px;
+  overflow: hidden; }
+
+nav {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.01); }
+  nav .logo {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.01); }
+  nav .rightMain .subNavigation {
+    text-align: right; }
+
+.center {
+  margin-top: 120px; }
+  .center .column li .list {
+    height: 95%; }
+  .center .content .list .main {
+    background: white;
+    box-shadow: none;
+    border: 1px solid #dcdcdc; }
+    .center .content .list .main .agelist {
+      width: 70%; }
+      .center .content .list .main .agelist .ageright {
+        width: 87%; }
+  .center .content .list .slist .fileli {
+    width: 25%;
+    box-shadow: none; }
+
+.calendar .active, .calendar .clist div:hover, .top {
+  border-radius: 0 !important; }
+
+.top {
+  border: 1px solid red; }
+
+/*# sourceMappingURL=ie.sass.css.map */

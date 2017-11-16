@@ -1,0 +1,62 @@
+@import './config/setStyle.scss';
+/*****      index style        ****/
+*{
+    behavior: url(../css/PIE.htc);
+}
+
+body {
+	height:100%;
+	margin-top:-60px;
+	overflow:hidden;
+}
+
+nav {
+	box-shadow:0 0 $defWidth 0 rgba(0,0,0,0.01);
+	.logo {
+		box-shadow:0 0 $defWidth 0 rgba(0,0,0,0.01);
+	}
+	.rightMain {
+		.subNavigation {
+			text-align:right;
+		}
+	}
+}
+
+.center {
+	margin-top:120px;
+	.column {
+		li {
+			.list {
+				height:95%;
+			}
+		}
+	}
+	.content {
+		.list {
+			.main {
+				background:$white;
+				box-shadow:none;
+				border:1px solid #dcdcdc;
+				.agelist {
+					width:70%;
+					.ageright {
+						width:87%;
+					}
+				}
+			}
+			.slist {
+				.fileli {
+					width:25%;
+					box-shadow:none;
+				}
+			}
+		}
+	} 
+}
+
+.calendar .active, .calendar .clist div:hover ,.top{
+	border-radius:0 !important;
+}
+.top{
+	border:1px solid red;
+}

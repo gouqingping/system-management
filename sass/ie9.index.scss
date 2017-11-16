@@ -1,0 +1,90 @@
+@import './config/setStyle.scss';
+/*****      index style        ****/
+
+.left {
+	float:left;
+}
+.right {
+	float:right;
+}
+.clear {
+	clear:both;
+}
+html {height:100%;}
+nav {
+	.logo {
+		@extend .left;
+		width:15%;
+	}
+	.rightMain {
+		@extend .right;
+		width:82%;
+		.title {
+			@extend .left;
+		}
+		.subNavigation {
+			@extend .right;
+			text-align:right;
+		}
+	}
+}
+
+.center {
+	.column {
+		@extend .left;
+		width: 15%;
+		li {
+			.list {
+				left:100%;
+			}
+		}
+	}
+	.content {
+		@extend .right;
+		width:83%;
+		height:100%;
+		.list {
+			@extend .left;
+			.listNav {
+				.title {
+					@extend .left;
+				}
+				.data {
+					@extend .right;
+				}
+			}
+			.main {
+				.cont {
+					.data {
+						@extend .left;
+					}
+					.user {
+						@extend .right;
+					}
+				}
+				.calendar {
+					@extend .left;
+					.ctitle div, .clist div {
+						@extend .left;
+					}
+				} 
+				.agelist {
+					@extend .right;
+					width:calc(100% - 290px);
+					.ageleft {
+						@extend .left;
+					}
+					.ageright {
+						@extend .right;
+						width:calc(100% - 90px);
+					}
+				}
+			}
+			.slist {
+				 .fileli {
+				 	@extend .left;
+				 }
+			}
+		}
+	}
+}

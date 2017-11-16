@@ -1,0 +1,74 @@
+@import './config/definition.scss';
+/** defl */
+.overfl{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.flex {
+    justify-content: $justify;
+    display: $flex;
+    display: $SafariFlex;
+}
+.inline {
+    display:inline-block;
+    display:inline;
+}
+.nowrap {
+    display:block;
+    white-space:nowrap; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+}
+.vertical {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    //-webkit-line-clamp:3;
+    overflow: hidden;
+}
+.cursor {
+    cursor: pointer;
+}
+.userselect{
+     -webkit-user-select:none;
+     -moz-user-select:none;
+     -ms-user-select:none;
+     user-select:none;
+}
+
+/** color */
+.colour {
+    color:$defColor;
+}
+.colourBg {
+    background:$defColor;
+}
+.red {
+    color:$auxRed;
+}
+.redBg {
+    background:$auxRed;
+}
+.orange {
+    color:$auxOrange;
+}
+.orangeBg {
+    background:$auxOrange;
+}
+
+/** but */
+.defColorBut {
+    border:$colourborder;
+    color:$defColor;
+}
+.misColorBut {
+    border:$auxRedborder;
+    color:$auxRed;
+}
+
+.title {
+    @extend .nowrap;
+}
+
+img {
+    border:none;
+}

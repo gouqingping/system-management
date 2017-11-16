@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,0CAA0C;AAG1C,sCAAsC;AAStC,kCAAkC;AAiBlC,oCAAoC;AAMpC,mCAAmC;AAKnC,gCAAgC;AAmChC,kBAAkB;AAIS,sBAAsB;AACtB,2DAA2D;AAC3D,wIAAwI;AACxI,kEAAkE;AAClE,gEAAgE;AAChE,eAAe;AACf,eAAe;AACf,eAAe;AACf,kBAAkB;AAClB;;;;;;;GAOG",
+"sources": ["../../sass/config/definition.scss"],
+"names": [],
+"file": "definition.css"
+}

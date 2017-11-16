@@ -1,0 +1,26 @@
+/** @type {default width} [description] */
+/** @type {font Size} [description] */
+/** @type {color} [description] */
+/** @type {padding} [description] */
+/** @type {margin} [description] */
+/** [columnwidth description] */
+/**default flex**/
+/* compatible Safar */
+/* nowrap | wrap | wrap-reverse(The first line is below) */
+/* flex-start | flex-end | center | space-between(Align at both ends) | space-around(The interval on each side of each item is equal) */
+/* flex-start | flex-end | center | baseline | stretch(default) */
+/* auto | flex-start | flex-end | center | baseline | stretch */
+/* default 0 */
+/* default 0 */
+/* default 1 */
+/* default auto */
+/*
+     Horizontal direction
+         row (default)  - starting point at the left end
+         row-reverse    - starting point at the right end
+     Vertical direction
+         column         - starting point at the top end
+         column-reverse - starting point at the bottom end
+ */
+
+/*# sourceMappingURL=definition.css.map */

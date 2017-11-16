@@ -1,0 +1,450 @@
+@import './config/setStyle.scss';
+/*****      index style        ****/
+
+html {
+    height:100%;
+}
+body {
+    font-family: $fonts;
+    font-size: $mSize;
+    color:$fontDefColor;
+    background:$white;
+    padding: $defWidth*0;
+    margin: $defWidth*0;
+    @extend .overfl;
+    height:calc(100% - #{$defWidth*12});
+}
+
+h1 {
+    font-size: $bigSize;
+}
+
+h2 {
+    font-size: $maxSize;
+}
+
+h3 {
+    font-size: $comSize;
+}
+
+h4 {
+    font-size: $proSize;
+}
+
+nav {
+    height: $defWidth*12;
+    line-height: $defWidth*12;
+    box-shadow:$boxShow;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    background:$white;
+    @extend .flex;
+    .columnWidth {
+        width:$doColu;
+    }
+    .navLogoCom {
+        height: $defWidth*12;
+        line-height: $defWidth*12;
+    }
+    .logo {
+        text-align: center;
+        @extend .colourBg;
+        @extend .columnWidth;
+        @extend .navLogoCom;
+        display: table-cell;
+        vertical-align: middle;
+        box-shadow:$boxShow;
+        width:$doColu;
+        img {
+            vertical-align: middle;
+        }
+    }
+    .rightMain {
+        @extend .navLogoCom;
+        padding:$lefRagPad;
+        @extend .flex;
+        width:calc(100% - #{getColu($doColu) + $defPadding*2});
+        .title {
+            padding:$defPadding*0;
+            margin:$defMargin*0;
+            width:calc(100% - #{getColu($doColu)*2});
+            font-weight: lighter;
+            @extend .nowrap;
+        }
+        .subNavigation {
+            width:getColu($doColu)*2;
+            text-align: right;
+            li {
+                margin-left: $defMargin;
+                @extend .inline;
+                img {
+                    margin-bottom: -$defWidth;
+                }
+                span {
+                    @extend a;
+                }
+            }
+        }
+    }
+}
+
+.center {
+    @extend .flex;
+    margin-top: $defWidth*12;
+    height:100%;
+    .column {
+        width:$doColu;
+        color:$white;
+        @extend .colourBg;
+        box-shadow:$boxShow;
+        height:100%;
+        position: relative;
+        li {
+            padding:$defWidth*0 $defMargin;
+            @extend .cursor;
+            @extend .nowrap;
+            span {
+                line-height:$defWidth*6;
+            }
+            &:hover {
+                @extend .activ;
+                .list {
+                    @extend .overfl;
+                    display:block;
+                }
+                .imgs {
+                    @extend .inline;
+                }
+                .img {
+                    display:none;
+                }
+                a span {
+                    color:$defColor;
+                }
+            }
+            a span {
+                color:$white;
+            }
+            img {
+                margin-bottom: -$defWidth+3;
+                margin-right: $defWidth;
+            }
+            .img {
+                @extend .inline;
+            }
+            .imgs {
+                display:none;
+            }
+            .list {
+                @extend .overfl;
+                display:none;
+                width:getColu($doColu)*3;
+                position: absolute;
+                left: $doColu;
+                top: $doColu*0;
+                z-index: 996;
+                color:$fontDefColor;
+                padding: $defPadding;
+                background: $bgColor;
+                border-right: $border;
+                height:calc(100% - #{$defPadding*2});
+                li {
+                    padding: $defPadding - $defWidth $defPadding*0;
+                    b {
+                        font-size: $mSize;
+                    }
+                    ul {
+                        margin-top:  $defPadding - $defWidth;
+                    }
+                    li {
+                        @extend .inline;
+                        padding:$defWidth $defWidth*0;
+                        margin-right:$defMargin;
+                        width:$doColu - 50;
+                        float: left;
+                        @extend .nowrap;
+                        border-bottom:none;
+                    }
+                    li:last-child:after {
+                        clear: both;
+                        content:"";
+                    }
+                    border-bottom:$border;
+                }
+                li:hover {
+                    background:none;
+                }
+                li:last-child {
+                    border-bottom:none;
+                }
+            }
+        }
+        .activ {
+            background:$white;
+            @extend .colour;
+        }
+        .msg {
+            height: $defWidth*12;
+            line-height: $defWidth*12;
+            position:absolute;
+            left:0;
+            bottom: 0;
+            width:100%;
+            li {
+                margin-left: $defMargin;
+                padding:$defPadding*0;
+                @extend .inline;
+            }
+            li:hover {
+                background:none;
+            }
+        }
+    }
+    .content {
+        width:calc(100% - #{getColu($doColu)});
+        @extend .overfl;
+        //padding:$defPadding;
+        flex-wrap: $f_wrap;
+        align-content:$justify;
+        @extend .flex;
+        .list {
+            width:50%;
+            height:auto;
+            .listNav {
+                color:$fontDefColor;
+                padding:$boTopPad;
+                @extend .flex;
+                margin: $lefRagMrg;
+                .title {
+                    font-size: $defSize;
+                    color:$fontDefColor;
+                    width:calc(100% - 50%);
+                    @extend .nowrap;
+                }
+                .data {
+                    font-size: $minSize;
+                    color: $fontDrkColor;
+                    text-align: right;
+                    line-height: $defWidth*5;
+                    width:50%;
+                    @extend .nowrap;
+                }
+                img {
+                    margin-bottom: -8px;
+                }
+            }
+            .main {
+                width:calc(100% - #{$defPadding*4});
+                height:auto;
+                box-shadow:$boxShow;
+                padding: $lefRagPad;
+                margin: $lefRagMrg;
+                .title {
+                    padding: ($defPadding - $defWidth) 0;
+                    .top {
+                        @extend .misColorBut;
+                        padding:$defWidth*0 $defWidth - 3px;
+                        border-radius:$defWidth - 3px;
+                        @extend .userselect;
+                        margin-left: $defWidth;
+                    }
+                }
+                li {
+                    border-bottom: $border;
+                    padding-bottom: $defPadding - $defWidth;
+                }
+                li:last-child {
+                    border-bottom: none;
+                }
+                .cont {
+                    @extend .flex;
+                    font-size: $mSize;
+                    img {
+                        margin-bottom: -$defWidth - 1px;
+                    }
+                    .data {
+                        width:60%;
+                        @extend .colour;
+                        @extend .nowrap;
+                    }
+                    .user {
+                        width:40%;
+                        text-align: right;
+                        @extend .colour;
+                        @extend .nowrap;
+                    }
+                    .footer {
+                        width:100%;
+                        color:$fontDrkColor;
+                        @extend .nowrap;
+                        span {
+                            margin-left: $defWidth;
+                        }
+                    }
+                }
+                .agelist {
+                    height: $defWidth*60;
+                    @extend .overfl;
+                    width: calc(100% - #{$defWidth*55});
+                    margin-left: $defMargin;
+                }
+                .agemain {
+                    line-height:$defWidth*7;
+                    @extend .flex;
+                    .ageleft {
+                        width:$defWidth*16;
+                        text-align:center;
+                        .leftlist {
+                            width:inherit;
+                            margin-bottom:$defWidth - 4;
+                        }
+                    }
+                    .ageright {
+                        border:$border;
+                        width:calc(100% - #{$defWidth*16});
+                        background:$boderColor;
+                        margin-bottom: - ($defWidth - 4);
+                        position:relative;
+                        overflow: hidden;
+                        .listStyle {
+                            padding:$lefRagPad;
+                            margin-bottom:$defWidth - 4;
+                            position: absolute;
+                            z-index: 99;
+                            width: calc(100% - #{$defPadding*2});
+                            box-shadow: 0 0 1px 0 rgba(0,0,0,.45);
+                        }
+                        .listStyle:hover {
+                            z-index: 999;
+                            background:$bgColor !important;
+                            cursor:pointer;
+                            color:$fontDefColor !important;
+                        }
+                        .ver {
+                            @extend .vertical;
+                        }
+                    }
+                }
+                .nbsp {
+                    height:$defWidth*7;
+                    background:white;
+                    padding:$lefRagPad;
+                    margin-bottom:$defWidth - 4;
+                }
+            }
+            .slist {
+                @extend .flex;
+                flex-wrap: $f_wrap;
+                align-content:$justify;
+                .fileli {
+                    width:calc(100%/3 - #{$defPadding*2});
+                    padding:$defPadding;
+                    height:$defWidth*31;
+                    position:relative;
+                    box-shadow: $boxShow;
+                    text-align: center;
+                    margin: $boTopMrg;
+                    top:0;
+                    @include comptrans(top , 0.3s);
+                    img {
+                        max-width: 80%;
+                    }
+                    .fileicon {
+                        margin-top: $defWidth;
+                    }
+                    .filename {
+                        color: $white;
+                        position: absolute;
+                        bottom: $defWidth*5;
+                        left: $defWidth*0;
+                        right: $defWidth*0;
+                        font-size: $mSize;
+                        text-shadow: $boxShow;
+                        @extend .nowrap;
+                    }
+                }
+                .fileli:hover {
+                    cursor: pointer;
+                    top: -$defWidth;
+                    z-index: 999;
+                }
+            }
+            .mor {
+                text-align: right;
+                margin: $lefRagMrg;
+                img {
+                    @extend .cursor;
+                }
+            }
+        }
+    }
+}
+
+ul,li {
+    list-style:none;
+    margin:$defMargin*0;
+    padding:$defPadding*0;
+}
+p {
+    @include a;
+}
+
+a {
+    @extend p;
+}
+.if {
+    @if 1+1 != 2 {
+        width: 20px;
+    }
+    @else if 5 < 3 {
+        width: 100px;
+    }
+    @else {
+        width: 10px;
+    }
+}
+.for {
+    @for $i from 1 to 4 {
+        .gray#{$i} {
+            color: #333*$i;
+        }
+    }
+}
+
+$i:3;
+@while $i > 0 {
+    .gray#{$i} {
+        color: #333*$i;
+    }
+    $i:$i - 1;
+}
+
+$name:"lili","yaya","sansa";
+$name3:(name31:1,name32:2,name33:3);
+$name2:(name21:"lili",name22:"yaya",name23:"sansa");
+.each {
+    @each $i in $name {
+        .#{$i} {
+            width: 10px;
+        }
+    }
+}
+.each1 {
+    @each $i in $name2 {
+        .#{$i} {
+            width: 10px;
+        }
+    }
+}
+.each2 {
+    @each $k,$v in $name3 {
+        .#{$k} {
+            width: 10px*$v;
+        }
+    }
+}
+.test13 {
+    font-size: getColu($doColu);
+}
